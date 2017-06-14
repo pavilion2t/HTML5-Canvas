@@ -2,13 +2,17 @@
 <html>
 <head>
 	<title>Hello World Animated</title>
-
+    <script src="./modernizr.js"></script>
 	  <script type="text/javascript">
   	window.addEventListener("load",eventWindowLoaded,false);
 
   	function eventWindowLoaded(){
   		canvasApp();
   	}
+
+    function canvasSupport(){
+      return modernizr.canvas;
+    }
 
 
   	function canvasApp(){

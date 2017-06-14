@@ -21,9 +21,26 @@
 
   	    function drawScreen(){
   		  context.globalAlpha = 1;
-  		  context.fillStyle = "#000";
+  		  context.fillStyle = "#000000";
   		  context.fillRect(0,0,640,480);
 
+        context.globalAlpha = .25;
+        context.drawImage(helloWorldImage,0,0);
+
+          if(fadeIn){
+             alpha += .01;
+             if(alpha>=1){
+              alpha=1;
+              fadeIn=false;
+             }
+           }else{
+            alpha -= .01;
+            if(alpha<0){
+              alpha=0;
+              fadeIn=true;
+            }
+           }
+ 
             context.font = "72px Sans-Serif";
             context.textBaseline = "top";
 
@@ -31,13 +48,19 @@
             context.fillStyle = "#fff"; //设置颜色
             context.fillText(text,150,200); //将文本显示到屏幕上，三个参数分别是文本字符串，X坐标，Y坐标
 
+
+          
   		}
 
   		var text = "Hello World";
   		var alpha = 0;
+      var fadeIn = true;
+
+      var helloWorldImage = new Image();
+      helloWorldImage.src ="./html5bg.jpg";
 
   		function gameLoop(){
-  		  window.setTimeout('gameLoop',20);
+  		  window.setTimeout(gameLoop,20);
   		  drawScreen();
   		}
   		gameLoop();

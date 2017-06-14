@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello World Animated</title>
+
+	  <script type="text/javascript">
+  	window.addEventListener("load",eventWindowLoaded,false);
+
+  	function eventWindowLoaded(){
+  		canvasApp();
+  	}
+
+
+  	function canvasApp(){
+  		var theCanvas = document.getElementById("canvasOne");
+  		var context = theCanvas.getContext("2d");
+
+  		function drawScreen(){
+  			context.globalAlpha = 1;
+  			context.fillStyle = "#000";
+  			context.fillRect(0,0,640,480);
+
+            context.font = "72px Sans-Serif";
+            context.textBaseline = "top";
+
+            context.globalAlpha = alpha;
+            context.fillStyle = "#fff";
+            context.fillText(text,150,200);
+
+  		}
+
+  		var text = "Hello World";
+  		var alpha = 0;
+
+  		function gameLoop(){
+  			window.setTimeout('gameLoop',20);
+  			drawScreen();
+  		}
+  		gameLoop();
+  	}
+  </script>
+
+</head>
+<body>
+    <div>
+    	<canvas id="canvasOne" width="640" height="640">
+    		your brower does not support canvas. 
+    	</canvas>
+    </div>
+</body>
+</html>

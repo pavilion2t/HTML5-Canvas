@@ -17,10 +17,14 @@ Canvas放入H5页面要做的第一件事情：看页面是否已经加载，所
 所以，这里要使用JS事件。当定义的事件发生时，事件从对象发出，其他对象监听事件，这样就可以基于事件进行处理。JS可以监听对象的一些常见事件（键盘输入，鼠标移动和加载结束等）。
 
 第一个要监听的事件是window对象的load事件，改事件在页面加载结束时发生。
-为事件添加监听器，可以使用DOM的对象的addEventListener()方法,接收3个参数：
-·load事件
-·eventWindowLoaded()事件处理器函数
-·useCapture:true/false
+为事件添加监听器，可以使用DOM的对象的addEventListener()方法,接收3个参数：  
+
+  ** load事件  
+  
+  ** eventWindowLoaded()事件处理器函数   
+  
+  ** useCapture:true/false    
+  
   ```
 window.addEventListener(“load”,eventWindowLoaded,false);
 Function eventWindowLoaded(){

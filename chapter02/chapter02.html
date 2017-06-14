@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>chapter02</title>
+</head>
+<body>
+  <script type="text/javascript">
+  	window.addEventListener('load',eventWindowLoaded,false);
+  	function eventWindowLoaded(){
+  	  canvasApp();
+  	}
+
+  	function canvasApp(){
+  	  var theCanvas = document.getElementById("canvas");
+  	  var context = theCanvas.getContext("2d");
+      
+      drawScreen();
+
+      function drawScreen(){
+      	context.fillStyle = "#aaaaaa";
+      	context.fillRect(0,0,200,200);
+      	context.textBaseline = 'top';
+      	context.fillText("zhuting",0,0);
+      }   
+  	}
+  </script>
+
+  <div>
+  	<canvas id="canvas" width="500" height="500">
+  		you brower does not support canvas!
+  	</canvas>
+  </div>
+
+</body>
+</html>

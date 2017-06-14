@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>chapter02</title>
+</head>
+<body>
+  <script type="text/javascript">
+  	window.addEventListener('load',eventWindowLoaded,false);
+  	function eventWindowLoaded(){
+  	  canvasApp();
+  	}
+
+  	function canvasApp(){
+  	  var theCanvas = document.getElementById("canvas");
+  	  var context = theCanvas.getContext("2d");
+      
+      drawScreen();
+
+      function drawScreen(){
+        context.beginPath();
+        context.strokeStyle = "black";
+        context.lineWidth = 5;
+        context.arc(100,100,20,(Math.PI/180)*20,(Math.PI/180)*60,true);   
+        context.stroke();
+        context.closePath();
+      }   
+  	}
+
+  </script>
+
+  <div>
+  	<canvas id="canvas" width="500" height="500">
+  		you brower does not support canvas!
+  	</canvas>
+  </div>
+
+</body>
+</html>

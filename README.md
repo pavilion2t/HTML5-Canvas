@@ -1,6 +1,6 @@
 # H5 Canvas简介  
 
-![](http://osuv1lk9d.bkt.clouddn.com/d.gif)
+![叮当](http://osuv1lk9d.bkt.clouddn.com/d.gif)
 
 HTML文本标记语言。
 Canvas是屏幕上一个由JS控制的即时模式位图区域。
